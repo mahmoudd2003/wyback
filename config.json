@@ -1,0 +1,43 @@
+{
+  "database": {
+    "path": "wayback_import.db"
+  },
+  "wordpress": {
+    "url": "https://your-site.com",
+    "username": "admin",
+    "app_password": "xxxx xxxx xxxx xxxx xxxx xxxx",
+    "default_category_id": 1
+  },
+  "wayback": {
+    "rate_limit": 3,
+    "retries": 5,
+    "before_date": "20240801",
+    "after_date": null,
+    "user_agent": "Mozilla/5.0 (compatible; WaybackImporter/1.1)"
+  },
+  "processing": {
+    "batch_size": 150,
+    "image_compression": true,
+    "max_image_width": 1920,
+    "extract_dates": true,
+    "fix_rtl": true
+  },
+  "filters": {
+    "exclude_paths": [
+      "/wp-admin/",
+      "/feed/",
+      "/tag/",
+      "/author/",
+      ".xml",
+      ".json"
+    ],
+    "min_content_length": 100,
+    "allowed_domains": []
+  },
+  "seo": {
+    "generate_redirects": true,
+    "add_canonical": true,
+    "nofollow_external": true,
+    "add_schema": true
+  }
+}
